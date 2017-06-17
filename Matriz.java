@@ -4,6 +4,8 @@ import java.util.Scanner;	//Biblioteca para leer los datos del teclado
 public class Matriz
 {	//Ini Clase Matriz
 
+	//Agregando comentario para comprender el trabajo de github
+
 	//Atributos:
 	private int fil;			//El numero de filas de la matriz
 	private int col;			//El numero de columnas de la matriz
