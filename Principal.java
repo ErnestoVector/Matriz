@@ -5,19 +5,25 @@ class Principal
 {
 	public static void main(String[] args)
 	{
-//-----Declaración de variables---------------------------------------------------------------		
+//-----Declaración de variables---------------------------------------------------------------------------
 		int fil = 50;							//Declaramos las filas (El límite son 50)
 		int col = 50;							//Declaramos las columnas (El límite son 50)
-		double escalar = 0;
-		double [][] transp;
+		double escalar = 0;						//La constante por la cual se multiplicara la matriz
 		Matriz mat_a = new Matriz(fil, col);	//Creamos el objeto Matriz mat_a
 		Matriz mat_b = new Matriz(fil, col);	//Creamos el objeto Matriz mat_b
 		Scanner sc = new Scanner(System.in);	//Creamos al objeto para leer desde el teclado
-		char opcion;
-		Menu menu = new Menu();
-//--------------------------------------------------------------------------------------------
+		int opcion;
+		Menu menu = new Menu();					//Para acceder al menu de una manera mas rapida y comoda
+		double traza = 0;						//La constante que almacena el resultado de la traza
+//--------------------------------------------------------------------------------------------------------
 
 		menu.imprimeMenu();
+		opcion = sc.nextInt();
+		System.out.println("Caracter guardado:\t" + opcion);
+
+//--------------------------------------------------------------------------------------------------------
+		//Crear la respuesta del menu con swith case
+//--------------------------------------------------------------------------------------------------------
 
 		//mat_a.setFilas(fil);					//De la matriz, actualizamos filas
 		//mat_a.setColumnas(col);					//De la matriz, actualizamos columnas
@@ -53,6 +59,9 @@ class Principal
 		//mat_b = mat_a.sumaMatriz(mat_b);
 		//System.out.println("\nSuma de la matriz A + B = B");
 		//mat_b.imprimeMatriz();
+
+		//traza = mat_a.trazaMatriz();
+		//System.out.println("Traza de la matriz:\t" + traza);
 
 	}
 }
