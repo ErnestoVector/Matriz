@@ -8,7 +8,11 @@ class Principal
 //-----Declaración de variables---------------------------------------------------------------------------
 		int fil = 50;							//Declaramos las filas (El límite son 50)
 		int col = 50;							//Declaramos las columnas (El límite son 50)
+
+		int opc = 0;
+		double escalar = 0;
 		double escalar = 0;						//La constante por la cual se multiplicara la matriz
+
 		Matriz mat_a = new Matriz(fil, col);	//Creamos el objeto Matriz mat_a
 		Matriz mat_b = new Matriz(fil, col);	//Creamos el objeto Matriz mat_b
 		Scanner sc = new Scanner(System.in);	//Creamos al objeto para leer desde el teclado
@@ -24,6 +28,34 @@ class Principal
 //--------------------------------------------------------------------------------------------------------
 		//Crear la respuesta del menu con swith case
 //--------------------------------------------------------------------------------------------------------
+
+		switch(opc)
+		{
+			case 1
+			break;
+			
+			case 2
+			break;
+			
+			case 3
+			break;
+			
+			case 4
+			break;
+
+			case 5
+			break;
+
+			case 6
+			break;
+
+		}
+
+
+
+
+
+
 
 		//mat_a.setFilas(fil);					//De la matriz, actualizamos filas
 		//mat_a.setColumnas(col);					//De la matriz, actualizamos columnas
