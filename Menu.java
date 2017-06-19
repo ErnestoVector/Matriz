@@ -11,6 +11,6 @@ public class Menu
 		System.out.println("\t4) A - B");
 		System.out.println("\t5) B - A");
 		System.out.println("\t6) kA");
-		System.out.println("\t6) kB");
+		System.out.println("\t7) kB");
 	}
 }

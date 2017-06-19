@@ -4,8 +4,6 @@ import java.util.Scanner;	//Biblioteca para leer los datos del teclado
 public class Matriz
 {	//Ini Clase Matriz
 
-	//Agregando comentario para comprender el trabajo de github
-
 	//Atributos:
 	private int fil;			//El numero de filas de la matriz
 	private int col;			//El numero de columnas de la matriz
@@ -265,6 +263,33 @@ public class Matriz
 		return resta;		//Entrega la matriz "resta"
 	}
 
+	//La traza solo aplica con matrices cuadradas
+	public double trazaMatriz()
+	{
+		int i, j;								//Para el recorrido de los ciclos for
+		double traza = 0;						//Nuevo valor para guardar el valor de la traza
 
+		//Si la matriz es cuadrada, realiza la traza
+		if(getFilas() == getColumnas())
+		{
+			for(i = 0; i < fil; i++)
+			{
+				for(j = 0; j < col; j++)
+				{
+					if(i == j)
+					{
+						traza = traza + mat[i][j]; 
+					}
+					
+				}
+			}
+		}
+		else
+		{
+			System.out.println("\nLa matriz debe ser cuadrada.");
+		}
+
+		return traza;
+	}
 	
 }	//Fin Clase Matriz
