@@ -8,57 +8,83 @@ class Principal
 //-----Declaración de variables---------------------------------------------------------------------------
 		int fil = 50;							//Declaramos las filas (El límite son 50)
 		int col = 50;							//Declaramos las columnas (El límite son 50)
-
-		int opc = 0;
-		double escalar = 0;
 		double escalar = 0;						//La constante por la cual se multiplicara la matriz
-
 		Matriz mat_a = new Matriz(fil, col);	//Creamos el objeto Matriz mat_a
 		Matriz mat_b = new Matriz(fil, col);	//Creamos el objeto Matriz mat_b
+		Matriz mat_c = new Matriz(fil, col);	//Creamos una tercer matriz para guardar los resultados
 		Scanner sc = new Scanner(System.in);	//Creamos al objeto para leer desde el teclado
 		int opcion;
 		Menu menu = new Menu();					//Para acceder al menu de una manera mas rapida y comoda
 		double traza = 0;						//La constante que almacena el resultado de la traza
 //--------------------------------------------------------------------------------------------------------
 
-		menu.imprimeMenu();
-		opcion = sc.nextInt();
-		System.out.println("Caracter guardado:\t" + opcion);
-
-//--------------------------------------------------------------------------------------------------------
-		//Crear la respuesta del menu con swith case
-//--------------------------------------------------------------------------------------------------------
-
-		switch(opc)
+		do
 		{
-			case 1
-			break;
-			
-			case 2
-			break;
-			
-			case 3
-			break;
-			
-			case 4
-			break;
+			menu.imprimeMenu();
+			opcion = sc.nextInt();
+			System.out.println("Caracter guardado:\t" + opcion);
 
-			case 5
-			break;
+			switch(opcion)
+			{
+				//Matriz A
+				case 1:
+					mat_a.setFilas(fil);					//De la matriz A, actualizamos filas
+					mat_a.setColumnas(col);					//De la matriz A, actualizamos columnas
+					mat_a.llenaMatriz();					//Llenamos la matrtiz A
+					mat_a.imprimeMatriz();					//Visualizamos la matriz A
+				break;
+				
+				//Matriz B
+				case 2:
+					mat_b.setFilas(fil);					//De la matriz B, actualizamos filas
+					mat_b.setColumnas(col);					//De la matriz B, actualizamos columnas
+					mat_b.llenaMatriz();					//Llenamos la matrtiz B
+					mat_b.imprimeMatriz();					//Visualizamos la matriz B
+				break;
+				
+				//Suma A + B
+				case 3:
+					mat_c = mat_a.sumaMatriz(mat_b);		//Asignamos a C la suma A + B
+					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
+				break;
+				
+				//Resta A - B
+				case 4:
+					mat_c = mat_a.restaMatriz(mat_b);		//Asignamos a C la resta A - B
+					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
+				break;
 
-			case 6
-			break;
+				//Resta B - A
+				case 5:
+					mat_c = mat_b.restaMatriz(mat_a);		//Asignamos a C la resta B - A
+					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
+				break;
 
+				//Multiplicacion por escalar matriz A
+				case 6:
+				break;
+
+				//Multiplicacion por escalar matriz B
+				case 7:
+				break;
+
+				//Traza matriz A 
+				case 8:
+				break;
+
+				//Traza matriz B
+				case 9:
+				break;
+
+				default:
+				break;
+
+			}
 		}
+		while(opcion != 15);
 
 
-
-
-
-
-
-		//mat_a.setFilas(fil);					//De la matriz, actualizamos filas
-		//mat_a.setColumnas(col);					//De la matriz, actualizamos columnas
+		
 
 		//mat_b.setFilas(fil);
 		//mat_b.setColumnas(col);
