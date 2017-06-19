@@ -153,7 +153,7 @@ public class Matriz
 	{
 		int i, j;								//Para el recorrido de los ciclos for
 		
-		System.out.println("\nLos datos de la matriz son:"); 
+		//System.out.println("\nLos datos de la matriz son:"); 
 		
 		for (i = 0; i < fil; i++)				//Inicio for (filas)
 		{

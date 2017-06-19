@@ -14,15 +14,15 @@ class Principal
 		Matriz mat_c = new Matriz(fil, col);	//Creamos una tercer matriz para guardar los resultados
 		Scanner sc = new Scanner(System.in);	//Creamos al objeto para leer desde el teclado
 		int opcion;
-		Menu menu = new Menu();					//Para acceder al menu de una manera mas rapida y comoda
 		double traza = 0;						//La constante que almacena el resultado de la traza
 //--------------------------------------------------------------------------------------------------------
 
 		do
 		{
-			menu.imprimeMenu();
+					
+			Menu.imprimeMenu();
 			opcion = sc.nextInt();
-			System.out.println("Caracter guardado:\t" + opcion);
+			System.out.println("\nProcesando opcion:\t" + opcion);
 
 			switch(opcion)
 			{
@@ -32,46 +32,60 @@ class Principal
 					mat_a.setColumnas(col);					//De la matriz A, actualizamos columnas
 					mat_a.llenaMatriz();					//Llenamos la matrtiz A
 					mat_a.imprimeMatriz();					//Visualizamos la matriz A
+					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla
 				break;
 				
+
 				//Matriz B
 				case 2:
 					mat_b.setFilas(fil);					//De la matriz B, actualizamos filas
 					mat_b.setColumnas(col);					//De la matriz B, actualizamos columnas
 					mat_b.llenaMatriz();					//Llenamos la matrtiz B
 					mat_b.imprimeMatriz();					//Visualizamos la matriz B
+					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla
 				break;
+				
 				
 				//Suma A + B
 				case 3:
 					mat_c = mat_a.sumaMatriz(mat_b);		//Asignamos a C la suma A + B
+					System.out.println("La suma de las matrices es:");
 					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
+					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla		
 				break;
+				
 				
 				//Resta A - B
 				case 4:
 					mat_c = mat_a.restaMatriz(mat_b);		//Asignamos a C la resta A - B
-					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
+					mat_c.imprimeMatriz();    				//Visualizamos el resultado (C)
+					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla		
 				break;
 
+				
 				//Resta B - A
 				case 5:
 					mat_c = mat_b.restaMatriz(mat_a);		//Asignamos a C la resta B - A
 					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
+					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla		
 				break;
 
+				
 				//Multiplicacion por escalar matriz A
 				case 6:
 				break;
 
+				
 				//Multiplicacion por escalar matriz B
 				case 7:
 				break;
 
+				
 				//Traza matriz A 
 				case 8:
 				break;
 
+				
 				//Traza matriz B
 				case 9:
 				break;
@@ -80,8 +94,7 @@ class Principal
 				break;
 
 			}
-		}
-		while(opcion != 15);
+		}while(opcion != 0); //Condicion para salir del menu y del programa
 
 
 		
