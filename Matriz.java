@@ -291,5 +291,26 @@ public class Matriz
 
 		return traza;
 	}
+
+	//Producto de matrices
+	public static Matriz producto(Matriz mat1, Matriz mat2)
+	{
+
+		Matriz producto = new Matriz(mat1.getFilas(),mat2.getColumnas());
+
+		for (int i=0; i<mat1.getFilas(); i++) 
+		{
+			for (int j=0; j<mat2.getColumnas(); j++)
+			{
+				for(int k=0; k<mat1.getColumnas(); k++)
+				{
+					producto.mat[i][j] +=  mat1.mat[i][k]*mat2.mat[k][j];
+				}	
+			}
+		}
+
+		return producto;
+	}
+
 	
 }	//Fin Clase Matriz

@@ -71,23 +71,30 @@ class Principal
 				break;
 
 				
-				//Multiplicacion por escalar matriz A
+				//Multiplicacion entre matrices A*B
 				case 6:
+					Matriz multi = new Matriz(mat_a.getFilas(), mat_b.getColumnas());
+					multi = Matriz.producto(mat_a, mat_b);
+					multi.imprimeMatriz();
 				break;
 
 				
-				//Multiplicacion por escalar matriz B
+				//Multiplicacion por escalar matriz A
 				case 7:
 				break;
 
-				
-				//Traza matriz A 
+				//Multilicacion por escalar matriz B
 				case 8:
 				break;
 
 				
-				//Traza matriz B
+				//Traza matriz A 
 				case 9:
+				break;
+
+				
+				//Traza matriz B
+				case 10:
 				break;
 
 				default:
