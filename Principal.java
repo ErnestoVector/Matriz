@@ -68,9 +68,8 @@ class Principal
 				
 				//Multiplicacion entre matrices A*B
 				case 6:
-					Matriz multi = new Matriz(mat_a.getFilas(), mat_b.getColumnas());
-					multi = Matriz.producto(mat_a, mat_b);
-					multi.imprimeMatriz();
+					mat_c = mat_a.producto(mat_b);
+					mat_c.imprimeMatriz();
 				break;
 
 				

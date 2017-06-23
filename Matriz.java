@@ -263,6 +263,39 @@ public class Matriz
 		return resta;		//Entrega la matriz "resta"
 	}
 
+	//Producto de matrices
+	public Matriz producto(Matriz mat2)
+	{
+		int i, j, k;								//Para el recorrido de los ciclos for
+		
+		//La matriz resultante del producto se obtiene del valor de:
+		//filas de la primer matriz x el valor de columnas de la segunda
+		//mat_a (fil) x mat_b (col)
+		Matriz producto = new Matriz(getFilas(),mat2.getColumnas());
+
+		//Si las columnas de A coincide con las filas de B
+		if (getColumnas() == mat2.getFilas())
+		{
+			for (i = 0; i < getFilas(); i++) 
+			{
+				for (j = 0; j < mat2.getColumnas(); j++)
+				{
+					for(k = 0; k < getColumnas(); k++)
+					{
+						producto.mat[i][j] +=  mat[i][k]*mat2.mat[k][j];
+					}	
+				}
+			}
+		}
+		//Si no coinciden, manda mensaje de error y entrega una matriz de ceros
+		else
+		{
+			System.out.println("Matrices incompatibles para la operacion");
+		}
+
+		return producto;
+	}
+
 	//La traza solo aplica con matrices cuadradas
 	public double trazaMatriz()
 	{
@@ -290,26 +323,6 @@ public class Matriz
 		}
 
 		return traza;
-	}
-
-	//Producto de matrices
-	public static Matriz producto(Matriz mat1, Matriz mat2)
-	{
-
-		Matriz producto = new Matriz(mat1.getFilas(),mat2.getColumnas());
-
-		for (int i=0; i<mat1.getFilas(); i++) 
-		{
-			for (int j=0; j<mat2.getColumnas(); j++)
-			{
-				for(int k=0; k<mat1.getColumnas(); k++)
-				{
-					producto.mat[i][j] +=  mat1.mat[i][k]*mat2.mat[k][j];
-				}	
-			}
-		}
-
-		return producto;
 	}
 
 	
