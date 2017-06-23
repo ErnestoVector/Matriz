@@ -19,13 +19,5 @@ public class Menu
 		System.out.println("\t0) Para salir");
 
 	}
-
-	public static void LimpiarPantalla()
-	{
-		System.out.print("\n\nPresiona cualquier tecla para elegir otra opcion");
-		new java.util.Scanner(System.in).nextLine();
-		System.out.print("\033[H\033[2J");
-		System.out.flush();			
-	}
 	
 }

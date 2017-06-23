@@ -32,7 +32,6 @@ class Principal
 					mat_a.setColumnas(col);					//De la matriz A, actualizamos columnas
 					mat_a.llenaMatriz();					//Llenamos la matrtiz A
 					mat_a.imprimeMatriz();					//Visualizamos la matriz A
-					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla
 				break;
 				
 
@@ -42,7 +41,6 @@ class Principal
 					mat_b.setColumnas(col);					//De la matriz B, actualizamos columnas
 					mat_b.llenaMatriz();					//Llenamos la matrtiz B
 					mat_b.imprimeMatriz();					//Visualizamos la matriz B
-					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla
 				break;
 				
 				
@@ -50,8 +48,7 @@ class Principal
 				case 3:
 					mat_c = mat_a.sumaMatriz(mat_b);		//Asignamos a C la suma A + B
 					System.out.println("La suma de las matrices es:");
-					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
-					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla		
+					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)	
 				break;
 				
 				
@@ -59,15 +56,13 @@ class Principal
 				case 4:
 					mat_c = mat_a.restaMatriz(mat_b);		//Asignamos a C la resta A - B
 					mat_c.imprimeMatriz();    				//Visualizamos el resultado (C)
-					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla		
 				break;
 
 				
 				//Resta B - A
 				case 5:
 					mat_c = mat_b.restaMatriz(mat_a);		//Asignamos a C la resta B - A
-					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)
-					Menu.LimpiarPantalla();					//Funcion para limpiar pantalla		
+					mat_c.imprimeMatriz();					//Visualizamos el resultado (C)	
 				break;
 
 				
