@@ -15,7 +15,10 @@ public class Matriz
 //-----Constructores----------------------------------------------------------------------------------------------------------------------
 	//Overload del método Matriz
 	//Se inicializará así si no mandamos argumentos
-	public Matriz()
+	//Este constructor no te hace falta ya que en el archivo Principal.java has declarado la matriz
+	//con argumentos. Además java puede utilizar memoria dinámica, asi que se podria cambiar la
+	//manera de uso
+	public Matriz()					
 	{
 		this.fil = 1;				//filas = 1
 		this.col = 1;				//columnas = 1
@@ -280,6 +283,7 @@ public class Matriz
 			{
 				for (j = 0; j < mat2.getColumnas(); j++)
 				{
+					producto.mat[i][j]=0;	//Para asegurar que sea 0
 					for(k = 0; k < getColumnas(); k++)
 					{
 						producto.mat[i][j] +=  mat[i][k]*mat2.mat[k][j];

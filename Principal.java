@@ -71,7 +71,7 @@ class Principal
 					mat_c = mat_a.producto(mat_b);
 					mat_c.imprimeMatriz();
 				break;
-
+/*				Ya que no lo tienes implementado, no lo muestres ya que no va a realizar nada
 				
 				//Multiplicacion por escalar matriz A
 				case 7:
@@ -93,7 +93,7 @@ class Principal
 
 				default:
 				break;
-
+*/
 			}
 		}while(opcion != 0); //Condicion para salir del menu y del programa
 
